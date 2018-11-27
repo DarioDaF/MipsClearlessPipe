@@ -1,0 +1,11 @@
+work/
+
+*.bak
+*.mti
+*.wlf
+
+# This is the project file,
+# if using a different compiler
+# this should be removed
+
+#*.mpf
