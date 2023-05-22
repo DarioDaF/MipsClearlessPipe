@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 
 entity Adder is
 	generic (
-		N : Integer
+		N : Integer := 2
 	);
 	port (
 		A, B : in signed(N-1 downto 0);

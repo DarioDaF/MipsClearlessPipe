@@ -11,10 +11,24 @@ entity AdderTest is
 end AdderTest;
 
 architecture AdderTest of AdderTest is
+
+component Adder is
+	generic (
+		N : Integer
+	);
+	port (
+		A, B : in signed(N-1 downto 0);
+		S : out signed(N-1 downto 0);
+		DOSUB : in std_logic;
+		OFW : out std_logic
+	);
+end component;
+
    signal A, B, S : signed(SIZE-1 downto 0);
    signal DOSUB, OFW : std_logic;
+
 begin
-   UUT: entity Adder
+   UUT: Adder
 		generic map (N => SIZE)
 		port map (A => A, B => B, S => S, DOSUB => DOSUB, OFW => OFW);
 
